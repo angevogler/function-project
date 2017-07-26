@@ -2,18 +2,38 @@
 // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in JavaScript.
 // Then, write and example of using the function.
 
-function max(){
-    // Your answer here
+function max(num1, num2){
+  if (num1 > num2) {
+    return num1;
+  }
+  else {
+    return num2;
+  }
 }
+
+console.log (max(14, 82));
+console.log (max(22, 4));
 
 
 // 2.
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
 // Then, write and example of using the function.
 
-function maxOfThree(){
-    // Your answer here
+function maxOfThree(num1, num2, num3){
+    if (num1 > num2 && num1 > num3) {
+      return num1;
+    }
+    else if (num2 > num1 && num2 > num3) {
+      return num2;
+    }
+    else {
+      return num3;
+    }
 }
+
+console.log (maxOfThree(22, 4, 2));
+console.log (maxOfThree(4, 22, 2));
+console.log (maxOfThree(4, 2, 22));
 
 
 // 3.
@@ -21,19 +41,41 @@ function maxOfThree(){
 // Then, write and example of using the function.
 
 function isVowel(char){
-    // Your answer here
+  if (char.toUpperCase() == "A" || char.toUpperCase() == "E" || char.toUpperCase() == "I" || char.toUpperCase() == "O" || char.toUpperCase() == "U") {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
+console.log (isVowel("f"));
+console.log (isVowel("a"));
+console.log (isVowel("U"));
+console.log (isVowel("y"));
 
 // 4.
 // Write a function called `sum` that takes two parameters and returns the sum of those 2 numbers.
 // Then, write and example of using the function.
 
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+console.log (sum(4, 22));
+console.log (sum(22, 44));
 
 
 // 5.
 // Write a function named `avg` that takes 3 parameters and returns the average of those 3 numbers.
 // Then, write and example of using the function.
+
+function avg(num1, num2, num3) {
+  return ((num1 + num2 +num3)/3);
+}
+
+console.log (avg(4, 1, 22));
+console.log (avg(3, 6, 9));
 
 
 
@@ -41,6 +83,12 @@ function isVowel(char){
 // Write a function called `getLength` that takes one parameter (a string) and returns the length
 // Then, write and example of using the function.
 
+function getLength(string) {
+  return string.length;
+}
+
+console.log (getLength("four"));
+console.log (getLength("hummingbird"));
 
 
 // 7.
@@ -49,7 +97,17 @@ function isVowel(char){
 // Otherwise the function should return `false`.
 // Then, write and example of using the function.
 
+function greaterThan(num1, num2) {
+  if (num1 < num2) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
 
+console.log (greaterThan(4, 22));
+console.log (greaterThan(22, 4));
 
 // 8.
 // Write a function called `greet` that takes a
@@ -58,6 +116,12 @@ function isVowel(char){
 // is the parameter that was passed in.
 // Then, write and example of using the function.
 
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+
+console.log (greet("Tucker"));
+console.log (greet("Angela"));
 
 
 // 9.
@@ -68,3 +132,10 @@ function isVowel(char){
 // words: "quick", "fox", "fence"
 // sentence: "quick brown fox jumps over the fence"
 // Then, write and example of using the function.
+
+function madlib(dayOfWeek, food, meal, adjective) {
+  return "On " + dayOfWeek + " I ate " + food + " for " + meal + " and it was " + adjective;
+}
+
+console.log (madlib("Tuesday", "tacos", "dinner", "delicious"));
+console.log (madlib("Saturday", "chocolate cake", "breakfast", "phenomenal"));
